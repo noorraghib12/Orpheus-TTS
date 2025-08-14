@@ -21,12 +21,13 @@ save_steps = config["save_steps"]
 pad_token = config["pad_token"]
 number_processes = config["number_processes"]
 learning_rate = config["learning_rate"]
+upload_repo_id = config['upload_repo_id']
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, attn_implementation="flash_attention_2")
 
 
-ds = load_dataset(dsn, split="train") 
+ds = load_dataset(dsn) 
 
 wandb.init(project=project_name, name = run_name)
 
@@ -34,6 +35,7 @@ training_args = TrainingArguments(
     overwrite_output_dir=True,
     num_train_epochs=epochs,
     per_device_train_batch_size=batch_size, 
+    per_device_eval_batch_size=batch_size,
     logging_steps=1,
     bf16=True,
     output_dir=f"./{base_repo_id}",
@@ -41,13 +43,23 @@ training_args = TrainingArguments(
     save_steps=save_steps,
     remove_unused_columns=True, 
     learning_rate=learning_rate,
+    do_eval = True,
+    eval_steps=2000,
+    load_best_model_at_end=True,
+    eval_strategy='steps',
+    save_strategy='steps'
 )
 
 trainer = Trainer(
     model=model,
     args=training_args,
-    train_dataset=ds,
+    train_dataset=ds['train'],
+    eval_dataset=ds['test'],
 )
+
 
 trainer.train()
 
+trainer.create_model_card(model_name = upload_repo_id)
+
+trainer.push_to_hub()

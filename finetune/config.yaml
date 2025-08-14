@@ -1,17 +1,25 @@
 # CHANGE THIS TO YOUR OWN DATASET
-TTS_dataset: <PATH_TO_YOUR_DATASET>
+# ==============================
+# Dataset and Model Config
+# ==============================
+TTS_dataset: "<your-hf-username>/<your-dataset-name>"   # Hugging Face dataset repo ID
+model_name: "<your-hf-username>/<your-model-name>"      # Pretrained model repo ID
 
-model_name: "canopylabs/orpheus-tts-0.1-pretrained"
+# ==============================
+# Training Arguments
+# ==============================
+epochs: <num_epochs>            # e.g., 3
+batch_size: <batch_size>        # e.g., 8
+number_processes: <num_processes> # Number of parallel processes (e.g., 4)
+pad_token: <pad_token_id>       # Token ID used for padding (integer)
+save_steps: <save_every_n_steps> # How often to save model checkpoints
+eval_steps: <eval_every_n_steps> # How often to evaluate the model
+learning_rate: <learning_rate>  # e.g., 5.0e-5
+upload_repo_id: "<your-hf-username>/<your-output-model-repo>"  # Where to push trained model
 
-# Training Args
-epochs: 1
-batch_size: 1
-number_processes: 1
-pad_token: 128263
-save_steps: 5000
-learning_rate: 5.0e-5
-
-# Naming and paths
-save_folder: "checkpoints"
-project_name: "tuning-orpheus"
-run_name: "5e5-0"
+# ==============================
+# Naming and Paths
+# ==============================
+save_folder: "<path-to-save-checkpoints>"  # Local path to store outputs
+project_name: "<project-name>"             # For experiment tracking/logging
+run_name: "<run-name>"                     # Specific identifier for this run

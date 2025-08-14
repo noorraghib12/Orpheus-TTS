@@ -1,0 +1,89 @@
+  0%|                                                                                                                                                                                     | 0/6468 [00:00<?, ?it/s]Casting fp32 inputs back to torch.bfloat16 for flash-attn compatibility.
+                                                                                                                                                                                                                   
+{'loss': 7.2962, 'grad_norm': 225.7823944091797, 'learning_rate': 5e-05, 'epoch': 0.0}
+{'loss': 6.4119, 'grad_norm': 97.7344970703125, 'learning_rate': 4.999226963512678e-05, 'epoch': 0.0}
+{'loss': 4.7078, 'grad_norm': 68.36700439453125, 'learning_rate': 4.998453927025356e-05, 'epoch': 0.0}
+{'loss': 4.4326, 'grad_norm': 39.04391098022461, 'learning_rate': 4.997680890538033e-05, 'epoch': 0.0}
+{'loss': 3.85, 'grad_norm': 21.19756507873535, 'learning_rate': 4.9969078540507115e-05, 'epoch': 0.0}
+{'loss': 3.414, 'grad_norm': 33.34681701660156, 'learning_rate': 4.996134817563389e-05, 'epoch': 0.0}
+{'loss': 3.9517, 'grad_norm': 24.09478187561035, 'learning_rate': 4.9953617810760674e-05, 'epoch': 0.0}
+{'loss': 2.2752, 'grad_norm': 25.54285430908203, 'learning_rate': 4.9945887445887444e-05, 'epoch': 0.0}
+{'loss': 2.3754, 'grad_norm': 18.173994064331055, 'learning_rate': 4.993815708101423e-05, 'epoch': 0.0}
+{'loss': 1.7915, 'grad_norm': 25.312448501586914, 'learning_rate': 4.9930426716141004e-05, 'epoch': 0.0}
+{'loss': 2.4233, 'grad_norm': 18.381912231445312, 'learning_rate': 4.992269635126779e-05, 'epoch': 0.0}
+{'loss': 2.2241, 'grad_norm': 16.0924129486084, 'learning_rate': 4.991496598639456e-05, 'epoch': 0.0}
+{'loss': 2.1349, 'grad_norm': 16.26230812072754, 'learning_rate': 4.990723562152134e-05, 'epoch': 0.0}
+{'loss': 1.8244, 'grad_norm': 16.345521926879883, 'learning_rate': 4.9899505256648116e-05, 'epoch': 0.0}
+{'loss': 1.8725, 'grad_norm': 17.771482467651367, 'learning_rate': 4.989177489177489e-05, 'epoch': 0.0}
+{'loss': 2.2488, 'grad_norm': 18.428701400756836, 'learning_rate': 4.9884044526901675e-05, 'epoch': 0.0}
+{'loss': 1.6918, 'grad_norm': 17.628767013549805, 'learning_rate': 4.9876314162028445e-05, 'epoch': 0.0}
+{'loss': 1.7654, 'grad_norm': 17.96231460571289, 'learning_rate': 4.986858379715523e-05, 'epoch': 0.0}
+{'loss': 3.1674, 'grad_norm': 21.413747787475586, 'learning_rate': 4.9860853432282005e-05, 'epoch': 0.0}
+{'loss': 2.6734, 'grad_norm': 21.62470054626465, 'learning_rate': 4.985312306740879e-05, 'epoch': 0.0}
+{'loss': 2.2335, 'grad_norm': 11.627479553222656, 'learning_rate': 4.984539270253556e-05, 'epoch': 0.0}
+{'loss': 2.1233, 'grad_norm': 17.22441291809082, 'learning_rate': 4.983766233766234e-05, 'epoch': 0.0}
+{'loss': 1.6302, 'grad_norm': 14.974489212036133, 'learning_rate': 4.982993197278912e-05, 'epoch': 0.0}
+{'loss': 2.3877, 'grad_norm': 13.669904708862305, 'learning_rate': 4.98222016079159e-05, 'epoch': 0.0}
+{'loss': 2.2822, 'grad_norm': 17.700775146484375, 'learning_rate': 4.9814471243042677e-05, 'epoch': 0.0}
+{'loss': 2.117, 'grad_norm': 13.474905967712402, 'learning_rate': 4.980674087816945e-05, 'epoch': 0.0}
+{'loss': 2.4163, 'grad_norm': 14.55715560913086, 'learning_rate': 4.979901051329623e-05, 'epoch': 0.0}
+{'loss': 2.033, 'grad_norm': 12.704327583312988, 'learning_rate': 4.9791280148423006e-05, 'epoch': 0.0}
+{'loss': 2.4326, 'grad_norm': 28.458724975585938, 'learning_rate': 4.978354978354979e-05, 'epoch': 0.0}
+{'loss': 1.5977, 'grad_norm': 13.587492942810059, 'learning_rate': 4.977581941867656e-05, 'epoch': 0.0}
+{'loss': 2.4852, 'grad_norm': 18.871305465698242, 'learning_rate': 4.976808905380334e-05, 'epoch': 0.0}
+{'loss': 2.6311, 'grad_norm': 24.826566696166992, 'learning_rate': 4.976035868893012e-05, 'epoch': 0.0}
+{'loss': 2.2849, 'grad_norm': 17.390243530273438, 'learning_rate': 4.97526283240569e-05, 'epoch': 0.01}
+{'loss': 2.6777, 'grad_norm': 13.906967163085938, 'learning_rate': 4.974489795918368e-05, 'epoch': 0.01}
+{'loss': 1.8041, 'grad_norm': 13.060105323791504, 'learning_rate': 4.9737167594310454e-05, 'epoch': 0.01}
+{'loss': 1.3531, 'grad_norm': 10.917572975158691, 'learning_rate': 4.972943722943723e-05, 'epoch': 0.01}
+{'loss': 2.2832, 'grad_norm': 14.928858757019043, 'learning_rate': 4.9721706864564014e-05, 'epoch': 0.01}
+{'loss': 1.6807, 'grad_norm': 13.779558181762695, 'learning_rate': 4.971397649969079e-05, 'epoch': 0.01}
+{'loss': 2.5443, 'grad_norm': 15.974939346313477, 'learning_rate': 4.9706246134817566e-05, 'epoch': 0.01}
+{'loss': 2.4167, 'grad_norm': 15.587789535522461, 'learning_rate': 4.969851576994434e-05, 'epoch': 0.01}
+{'loss': 2.0699, 'grad_norm': 11.534002304077148, 'learning_rate': 4.969078540507112e-05, 'epoch': 0.01}
+{'loss': 2.2817, 'grad_norm': 13.976764678955078, 'learning_rate': 4.96830550401979e-05, 'epoch': 0.01}
+{'loss': 2.3973, 'grad_norm': 14.154918670654297, 'learning_rate': 4.967532467532468e-05, 'epoch': 0.01}
+{'loss': 1.4095, 'grad_norm': 11.560490608215332, 'learning_rate': 4.9667594310451455e-05, 'epoch': 0.01}
+{'loss': 2.0405, 'grad_norm': 12.24946403503418, 'learning_rate': 4.965986394557823e-05, 'epoch': 0.01}
+{'loss': 1.4168, 'grad_norm': 12.389220237731934, 'learning_rate': 4.9652133580705015e-05, 'epoch': 0.01}
+{'loss': 1.8257, 'grad_norm': 10.645781517028809, 'learning_rate': 4.964440321583179e-05, 'epoch': 0.01}
+{'loss': 1.8699, 'grad_norm': 13.630597114562988, 'learning_rate': 4.963667285095857e-05, 'epoch': 0.01}
+{'loss': 1.7881, 'grad_norm': 14.554672241210938, 'learning_rate': 4.9628942486085344e-05, 'epoch': 0.01}
+{'loss': 2.3855, 'grad_norm': 12.561792373657227, 'learning_rate': 4.962121212121213e-05, 'epoch': 0.01}
+  File "/root/Orpheus-TTS/finetune/train.py", line 61, in <module>
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2238, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2664, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 3137, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 3086, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 4254, in evaluate
+    output = eval_loop(
+             ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 4439, in evaluation_loop
+    for step, inputs in enumerate(dataloader):
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/data_loader.py", line 567, in __iter__
+    current_batch = next(dataloader_iter)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/data/dataloader.py", line 789, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/data/data_collator.py", line 93, in default_data_collator
+    return torch_default_data_collator(features)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/data/data_collator.py", line 159, in torch_default_data_collator
+    batch[k] = torch.tensor([f[k] for f in features])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: expected sequence of length 81 at dim 1 (got 37)

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/Orpheus-TTS/finetune/train.py", line 46, in <module>
+    trainer = Trainer(
+              ^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 566, in __init__
+    raise ValueError(
+ValueError: You cannot perform fine-tuning on purely quantized models. Please attach trainable adapters on top of the quantized model to correctly perform fine-tuning. Please see: https://huggingface.co/docs/transformers/peft for more details

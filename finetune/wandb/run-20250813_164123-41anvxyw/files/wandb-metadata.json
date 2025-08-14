@@ -1,0 +1,40 @@
+{
+  "os": "Linux-6.8.0-52-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.11",
+  "startedAt": "2025-08-13T16:41:23.085824Z",
+  "program": "/root/Orpheus-TTS/finetune/train.py",
+  "codePath": "finetune/train.py",
+  "codePathLocal": "train.py",
+  "git": {
+    "remote": "https://github.com/canopyai/Orpheus-TTS.git",
+    "commit": "835ac7cd1870fa1fa5e342e14260c2d68cabb2e7"
+  },
+  "email": "raghib@blockstak.ai",
+  "root": "/root/Orpheus-TTS/finetune",
+  "host": "86442859b0be",
+  "executable": "/usr/bin/python",
+  "cpu_count": 48,
+  "cpu_count_logical": 96,
+  "gpu": "NVIDIA A40",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "107374182400",
+      "used": "29263839232"
+    }
+  },
+  "memory": {
+    "total": "540644196352"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-659357c3-f2b6-55ab-a716-a11ed6cd2085"
+    }
+  ],
+  "cudaVersion": "12.7",
+  "writerId": "omt8jm9zdz5hmhy1pjlvkh6qk741hf16"
+}

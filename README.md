@@ -1,4 +1,4 @@
-# Orpheus TTS
+# Orpheus TTS (FORKED)
 
 #### Updates 🔥
 - [5/2025] We've partnered with [Baseten](https://www.baseten.co/blog/canopy-labs-selects-baseten-as-preferred-inference-provider-for-orpheus-tts-model) to bring highly optimized inference to Orpheus at fp8 (more performant) and fp16 (full fidelity) inference. See code and docs [here](/additional_inference_options/baseten_inference_example/README.md).
@@ -115,8 +115,23 @@ This is a very simple process analogous to tuning an LLM using Trainer and Trans
 
 You should start to see high quality results after ~50 examples but for best results, aim for 300 examples/speaker.
 
-1. Your dataset should be a huggingface dataset in [this format](https://huggingface.co/datasets/canopylabs/zac-sample-dataset)
-2. We prepare the data using [this notebook](https://colab.research.google.com/drive/1wg_CPCA-MzsWtsujwy-1Ovhv-tn8Q1nD?usp=sharing). This pushes an intermediate dataset to your Hugging Face account which you can can feed to the training script in finetune/train.py. Preprocessing should take less than 1 minute/thousand rows.
+1-Your dataset should be a huggingface dataset in [this format](https://huggingface.co/datasets/canopylabs/zac-sample-dataset)
+2. We prepare the data using [this script](./tokenize_dataset.py). This pushes an intermediate dataset to your Hugging Face account which you can can feed to the training script in finetune/train.py. Please remember to edit  Preprocessing should take less than 1 minute/thousand rows.
+
+```bash
+python tokenize_dataset.py
+
+```
+By default, it processes:
+
+* `noor-raghib-12/sust_banspeech-orpheus-formatted` → original dataset
+* Outputs to → `noor-raghib-12/sust_banspeech-orpheus-tokenized`
+
+```bash
+python tokenize_dataset.py \
+  --original_dataset "your-username/your-audio-dataset" \
+  --output_dataset "your-username/your-tokenized-output"
+```
 3. Modify the `finetune/config.yaml` file to include your dataset and training properties, and run the training script. You can additionally run any kind of huggingface compatible process like Lora to tune the model.
    ```bash
     pip install transformers datasets wandb trl flash_attn torch

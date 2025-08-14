@@ -1,0 +1,97 @@
+  0%|                                                                                                                                                                                | 0/10 [00:00<?, ?it/s]Casting fp32 inputs back to torch.bfloat16 for flash-attn compatibility.
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [01:40<00:00, 10.10s/it]
+{'loss': 7.2962, 'grad_norm': 225.7823944091797, 'learning_rate': 5e-05, 'epoch': 0.0}
+{'loss': 6.4119, 'grad_norm': 97.7344970703125, 'learning_rate': 4.5e-05, 'epoch': 0.0}
+{'loss': 4.6565, 'grad_norm': 66.15412139892578, 'learning_rate': 4e-05, 'epoch': 0.0}
+{'loss': 4.312, 'grad_norm': 26.693992614746094, 'learning_rate': 3.5e-05, 'epoch': 0.0}
+{'loss': 3.7962, 'grad_norm': 21.168560028076172, 'learning_rate': 3e-05, 'epoch': 0.0}
+{'loss': 3.3654, 'grad_norm': 27.496074676513672, 'learning_rate': 2.5e-05, 'epoch': 0.0}
+{'loss': 3.9331, 'grad_norm': 24.304710388183594, 'learning_rate': 2e-05, 'epoch': 0.0}
+{'loss': 2.4231, 'grad_norm': 21.692338943481445, 'learning_rate': 1.5e-05, 'epoch': 0.0}
+{'loss': 2.4727, 'grad_norm': 21.640106201171875, 'learning_rate': 1e-05, 'epoch': 0.0}
+{'loss': 2.1413, 'grad_norm': 21.77958869934082, 'learning_rate': 5e-06, 'epoch': 0.0}
+{'train_runtime': 100.9508, 'train_samples_per_second': 0.099, 'train_steps_per_second': 0.099, 'train_loss': 4.080847811698914, 'epoch': 0.0}
+training_args.bin: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5.78k/5.78k [00:00<00:00, 8.62kB/s]
+Upload 4 LFS files:   0%|                                                                                                                                       | 0/4 [00:08<?, ?it/s]
+model-00003-of-00003.safetensors:   4%|████                                                                                                       | 128M/3.32G [00:07<01:55, 27.7MB/s]Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map                                            | 144M/3.32G [00:08<01:40, 31.5MB/s]
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))                                                                | 128M/4.93G [00:07<02:31, 31.7MB/s]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 451, in result
+    self._condition.wait(timeout)
+  File "/usr/lib/python3.11/threading.py", line 327, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/Orpheus-TTS/finetune/train.py", line 66, in <module>
+    trainer.push_to_hub()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 4948, in push_to_hub
+    return upload_folder(
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 1669, in _inner
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 4982, in upload_folder
+    commit_info = self.create_commit(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 1669, in _inner
+    return fn(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 4239, in create_commit
+    self.preupload_lfs_files(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 4531, in preupload_lfs_files
+    _upload_lfs_files(**upload_kwargs, num_threads=num_threads)  # type: ignore [arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_commit_api.py", line 457, in _upload_lfs_files
+    thread_map(
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 49, in _executor_map
+    with PoolExecutor(max_workers=max_workers, initializer=tqdm_class.set_lock,
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 647, in __exit__
+    self.shutdown(wait=True)
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 235, in shutdown
+    t.join()
+  File "/usr/lib/python3.11/threading.py", line 1119, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.11/threading.py", line 1139, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+                                                                                                                                                                                      Exception ignored in: <module 'threading' from '/usr/lib/python3.11/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/threading.py", line 1560, in _shutdown                                                                                | 133M/4.93G [00:07<02:22, 33.8MB/s]
+    atexit_call()
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 31, in _python_exit
+    t.join()
+  File "/usr/lib/python3.11/threading.py", line 1119, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.11/threading.py", line 1139, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
+
+model-00003-of-00003.safetensors:   6%|██████▏                                                                                                    | 192M/3.32G [00:09<01:19, 39.3MB/s]
+model-00002-of-00003.safetensors:   3%|███                                                                                                        | 143M/4.93G [00:08<04:39, 17.1MB/s]
+model-00001-of-00003.safetensors:   2%|██▍                                                                                                        | 112M/4.95G [00:08<03:28, 23.2MB/s]

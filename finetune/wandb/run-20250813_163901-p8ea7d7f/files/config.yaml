@@ -1,0 +1,60 @@
+_wandb:
+    value:
+        cli_version: 0.21.1
+        e:
+            rt8livbrwlqiad5hxmjaoad0ua6t1e6p:
+                codePath: finetune/train.py
+                codePathLocal: train.py
+                cpu_count: 48
+                cpu_count_logical: 96
+                cudaVersion: "12.7"
+                disk:
+                    /:
+                        total: "107374182400"
+                        used: "29263728640"
+                email: raghib@blockstak.ai
+                executable: /usr/bin/python
+                git:
+                    commit: 835ac7cd1870fa1fa5e342e14260c2d68cabb2e7
+                    remote: https://github.com/canopyai/Orpheus-TTS.git
+                gpu: NVIDIA A40
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 10752
+                      memoryTotal: "48305799168"
+                      name: NVIDIA A40
+                      uuid: GPU-659357c3-f2b6-55ab-a716-a11ed6cd2085
+                host: 86442859b0be
+                memory:
+                    total: "540644196352"
+                os: Linux-6.8.0-52-generic-x86_64-with-glibc2.35
+                program: /root/Orpheus-TTS/finetune/train.py
+                python: CPython 3.11.11
+                root: /root/Orpheus-TTS/finetune
+                startedAt: "2025-08-13T16:39:01.017130Z"
+                writerId: rt8livbrwlqiad5hxmjaoad0ua6t1e6p
+        m: []
+        python_version: 3.11.11
+        t:
+            "1":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+            "2":
+                - 1
+                - 11
+                - 41
+                - 49
+                - 51
+                - 71
+            "3":
+                - 13
+            "4": 3.11.11
+            "5": 0.21.1
+            "6": 4.55.1
+            "12": 0.21.1
+            "13": linux-x86_64
